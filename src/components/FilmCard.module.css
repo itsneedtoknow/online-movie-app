@@ -1,0 +1,13 @@
+.film__item {
+  display: flex;
+  gap: 24px;
+  flex: 0 1 32%;
+  justify-content: space-between;
+}
+
+.film__img {
+  max-width: 250px;
+  width: 100%;
+  flex: 1 1 100%;
+  background-color: beige;
+}
