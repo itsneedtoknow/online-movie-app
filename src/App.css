@@ -22,3 +22,11 @@ a {
   text-decoration: none;
   transition: box-shadow 0.3s;
 }
+nav {
+  display: flex;
+  max-width: 80%;
+  justify-content: right;
+  gap: 32px;
+  padding: 16px;
+  margin-left: auto;
+}
