@@ -2,10 +2,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { Home } from "./components/Home.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import {
+  // createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router";
 import { FilmsList } from "./components/FilmsList.jsx";
 import { FilmPage } from "./components/FilmPage.jsx";
-let route = createBrowserRouter([
+let route = createHashRouter([
   {
     path: "/",
     element: <App />,
