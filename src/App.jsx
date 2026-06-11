@@ -1,11 +1,14 @@
-import { Children } from "react";
+import { Outlet } from "react-router";
 import "./App.css";
-import { FilmsList } from "./components/FilmsList";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <>
-      <FilmsList>{Children}</FilmsList>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
