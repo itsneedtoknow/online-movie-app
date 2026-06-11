@@ -6,7 +6,7 @@ export function FilmCard({ filmItem }) {
     <li className={styles.film__item}>
       <div className={styles.film__img}>
         <Link to={filmItem.imdbID}>
-          <img src={filmItem.Images[0]} />
+          <img src={filmItem.Poster} />
         </Link>
       </div>
       <div className={styles.film__content}>
