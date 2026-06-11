@@ -1,13 +1,30 @@
-.films_wrapper,
-.films__list {
-  display: flex;
-}
 .films_wrapper {
+  display: flex;
   flex-direction: column;
-  gap: 24px;
-  justify-content: center;
   align-items: center;
+  gap: 24px;
+  padding: 24px 0;
 }
+
 .films__list {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  list-style: none;
+}
+
+@media (max-width: 992px) {
+  .films__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .films__list {
+    grid-template-columns: 1fr;
+  }
 }
