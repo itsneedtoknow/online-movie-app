@@ -1,14 +1,17 @@
 import { FilmCard } from "./FilmCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./FilmsList.module.css";
 import { fetchFilms } from "../data/filmsData";
+import { useDispatch, useSelector } from "react-redux";
+import { filmsSelector } from "../redux/films/selectors";
+
 export function FilmsList() {
-  const [films, setFilms] = useState([]);
+  const dispatch = useDispatch();
+  const films = useSelector(filmsSelector);
+
   useEffect(() => {
-    fetchFilms()
-      .then(setFilms)
-      .catch((err) => console.error("Ошибка загрузки:", err));
-  }, []);
+    dispatch(fetchFilms());
+  }, [dispatch]);
 
   return (
     <section className="films">

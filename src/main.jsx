@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import React from "react";
 import "./index.css";
 import App from "./App.jsx";
 import { Home } from "./components/Home.jsx";
@@ -9,6 +10,8 @@ import {
 } from "react-router";
 import { FilmsList } from "./components/FilmsList.jsx";
 import { FilmPage } from "./components/FilmPage.jsx";
+import { store } from "./redux/store.js";
+import { Provider } from "react-redux";
 let route = createHashRouter([
   {
     path: "/",
@@ -27,5 +30,9 @@ let route = createHashRouter([
   },
 ]);
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={route} />,
+  <React.StrictMode>
+    <Provider store={store}>
+      <RouterProvider router={route} />
+    </Provider>
+  </React.StrictMode>,
 );

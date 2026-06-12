@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 import { fetchFilms } from "../data/filmsData";
 import styles from "./FilmPage.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { filmsSelector } from "../redux/films/selectors";
 
 export function FilmPage() {
   const { id } = useParams();
-  const [film, setFilm] = useState();
-
+  const dispatch = useDispatch();
+  const films = useSelector(filmsSelector);
+  const film = films.find((f) => f.imdbID === id);
   useEffect(() => {
-    fetchFilms().then((data) => {
-      const singleFilm = data.find((f) => f.imdbID === id);
-      setFilm(singleFilm);
-    });
-  }, [id]);
+    if (films.length == 0) dispatch(fetchFilms());
+  }, [films.length, dispatch]);
 
   if (!film) return <div className="loading">Загрузка...</div>;
 
