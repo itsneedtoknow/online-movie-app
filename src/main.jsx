@@ -2,14 +2,10 @@ import { createRoot } from "react-dom/client";
 import React from "react";
 import "./index.css";
 import App from "./App.jsx";
-import { Home } from "./components/Home.jsx";
-import {
-  // createBrowserRouter,
-  RouterProvider,
-  createHashRouter,
-} from "react-router";
-import { FilmsList } from "./components/FilmsList.jsx";
-import { FilmPage } from "./components/FilmPage.jsx";
+import { Home } from "./pages/Home.jsx";
+import { RouterProvider, createHashRouter } from "react-router";
+import { FilmsList } from "./features/films/filmsList/FilmsList.jsx";
+import { FilmPage } from "./pages/FilmPage.jsx";
 import { store } from "./redux/store.js";
 import { Provider } from "react-redux";
 let route = createHashRouter([
