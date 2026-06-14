@@ -1,9 +1,9 @@
 import { FilmCard } from "./FilmCard";
 import { useEffect } from "react";
 import styles from "./FilmsList.module.css";
-import { fetchFilms } from "../data/filmsData";
+import { fetchFilms } from "../redux/filmsData";
 import { useDispatch, useSelector } from "react-redux";
-import { filmsSelector } from "../redux/films/selectors";
+import { filmsSelector } from "../redux/selectors";
 
 export function FilmsList() {
   const dispatch = useDispatch();

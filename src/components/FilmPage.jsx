@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { fetchFilms } from "../data/filmsData";
+import { fetchFilms } from "../redux/filmsData";
 import styles from "./FilmPage.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { filmsSelector } from "../redux/films/selectors";
+import { filmsSelector } from "../redux/selectors";
 
 export function FilmPage() {
   const { id } = useParams();
