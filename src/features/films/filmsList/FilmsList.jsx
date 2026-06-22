@@ -5,7 +5,7 @@ import { fetchFilms } from "../../../redux/filmsData";
 import { useDispatch, useSelector } from "react-redux";
 import { filmsSelector } from "../../../redux/selectors";
 
-export function FilmsList() {
+function FilmsList() {
   const dispatch = useDispatch();
   const films = useSelector(filmsSelector);
 
@@ -28,3 +28,4 @@ export function FilmsList() {
     </section>
   );
 }
+export default FilmsList;
