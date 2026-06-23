@@ -1,0 +1,29 @@
+.films_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.films__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  list-style: none;
+}
+
+@media (max-width: 992px) {
+  .films__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .films__list {
+    grid-template-columns: 1fr;
+  }
+}
