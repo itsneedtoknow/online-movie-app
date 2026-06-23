@@ -3,11 +3,11 @@ import { useEffect } from "react";
 import styles from "./FilmsList.module.css";
 import { fetchFilms } from "../../../redux/filmsData";
 import { useDispatch, useSelector } from "react-redux";
-import { filmsSelector } from "../../../redux/selectors";
+import { selectFilms } from "../../../redux/selectors";
 
 function FilmsList() {
   const dispatch = useDispatch();
-  const films = useSelector(filmsSelector);
+  const films = useSelector(selectFilms);
 
   useEffect(() => {
     dispatch(fetchFilms());

@@ -3,16 +3,16 @@ import { useParams } from "react-router";
 import { fetchFilms } from "../redux/filmsData.js";
 import styles from "./FilmPage.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { filmsSelector } from "../redux/selectors.js";
+import { selectFilms } from "../redux/selectors.js";
 
 export function FilmPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const films = useSelector(filmsSelector);
+  const films = useSelector(selectFilms);
   const film = films.find((f) => f.imdbID === id);
   useEffect(() => {
-    if (films.length == 0) dispatch(fetchFilms());
-  }, [films.length, dispatch]);
+    dispatch(fetchFilms());
+  }, [dispatch]);
 
   if (!film) return <div className="loading">Загрузка...</div>;
 

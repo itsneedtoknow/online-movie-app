@@ -4,7 +4,7 @@ const initialState = {
   filmsList: [],
   isLoading: false,
 };
-export const filmsSlice = createSlice({
+export const filmActions = createSlice({
   name: "films",
   initialState,
   reducers: {
@@ -19,5 +19,5 @@ export const filmsSlice = createSlice({
   },
 });
 
-export const { load, filter } = filmsSlice.actions;
-export default filmsSlice.reducer;
+export const { load, filter } = filmActions.actions;
+export default filmActions.reducer;
