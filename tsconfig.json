@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true /* Разрешает использовать JS файлы рядом с TS */,
+    "skipLibCheck": true /* Пропускать проверку типов в node_modules */,
+    "esModuleInterop": true /* Позволяет использовать import вместо require */,
+    "allowSyntheticDefaultImports": true,
+    "strict": false /* Временно выключаем строгий режим для легкого старта */,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler" /* ИДЕАЛЬНО ДЛЯ СОВРЕМЕННЫХ СБОРЩИКОВ В TS 6.0 */,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true /* TS только проверяет типы, сборку делает ваш Vite/CRA */,
+    "jsx": "react-jsx" /* Поддержка JSX (для React 17 и новее) */
+  },
+  "include": ["src"] /* Проверяем только папку src */
+}
