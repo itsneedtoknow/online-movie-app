@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+// @ts-ignore
 import "./App.css";
 import { Header } from "./components/Header";
 

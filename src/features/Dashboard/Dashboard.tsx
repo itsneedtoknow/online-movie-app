@@ -1,8 +1,9 @@
 import { logout } from "../../redux/slices/authActions.js";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser } from "../../redux/selectors.js";
+//@ts-ignore
 import styles from "./Dashboard.module.css";
-import { Button } from "../../components/Button.jsx";
+import { Button } from "../../components/Button.js";
 
 export function Dashboard() {
   const userName = useSelector(selectUser);

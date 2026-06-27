@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-const savedUser = localStorage.getItem("userName");
+const savedUser: string | null = localStorage.getItem("userName");
+
+interface AuthState {
+  user: string | null;
+  isAuthorized: boolean;
+  isAdmin: boolean;
+}
+
 const initialState = {
-  user: savedUser || null,
+  user: savedUser,
   isAuthorized: !!savedUser,
   isAdmin: savedUser === "admin",
 };

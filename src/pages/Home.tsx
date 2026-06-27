@@ -1,9 +1,9 @@
-import { LoginForm } from "../features/login/LoginForm.jsx";
-import { isAuthorized } from "../redux/selectors.js";
-import { isAdmin } from "../redux/selectors.js";
+import { LoginForm } from "../features/login/LoginForm.tsx";
+import { isAuthorized } from "../redux/selectors.ts";
+import { isAdmin } from "../redux/selectors.ts";
 import { useSelector } from "react-redux";
-import { Dashboard } from "../features/Dashboard/Dashboard.jsx";
-import { AdminDashBoard } from "../features/AdminDashBoard/AdminDashboard.jsx";
+import { Dashboard } from "../features/Dashboard/Dashboard.tsx";
+import { AdminDashBoard } from "../features/AdminDashBoard/AdminDashBoard.tsx";
 
 export function Home() {
   const isUserAuthorized = useSelector(isAuthorized);

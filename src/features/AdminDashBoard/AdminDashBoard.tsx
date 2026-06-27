@@ -1,14 +1,15 @@
 import { selectUser } from "../../redux/selectors";
+// @ts-ignore
 import styles from "./AdminDashBoard.module.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/slices/authActions.js";
-import { Button } from "../../components/Button.jsx";
+import { Button } from "../../components/Button.tsx";
 
 export function AdminDashBoard() {
   const userName = useSelector(selectUser);
   const dispatch = useDispatch();
-  console.log("ПЕРЕМЕННАЯ LOGOUT СЕЙЧАС:", logout);
+
   return (
     <div className={styles["admin-dashboard"]}>
       <section className={`${styles["admin-card"]} ${styles["profile-card"]}`}>

@@ -1,12 +1,14 @@
-import { FilmCard } from "../filmCard/FilmCard.jsx";
+import { FilmCard } from "../filmCard/FilmCard.js";
 import { useEffect } from "react";
+//@ts-ignore
 import styles from "./FilmsList.module.css";
-import { fetchFilms } from "../../../redux/filmsData";
+import { fetchFilms } from "../../../redux/filmsData.js";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilms } from "../../../redux/selectors";
+import { selectFilms } from "../../../redux/selectors.js";
+import { ThunkDispatch } from "redux-thunk";
 
 function FilmsList() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
   const films = useSelector(selectFilms);
 
   useEffect(() => {

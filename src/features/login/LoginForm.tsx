@@ -1,5 +1,5 @@
 //import styles from "./LoginForm.module.css";
-import { useState } from "react";
+import { SubmitEvent, useState } from "react";
 import { Button } from "../../components/Button";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/slices/authActions.js";
@@ -9,7 +9,7 @@ export function LoginForm() {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     if (userName.trim() && password.trim()) {
       dispatch(login(userName));

@@ -1,12 +1,13 @@
 import { createRoot } from "react-dom/client";
 import React from "react";
 import { Suspense } from "react";
+// @ts-ignore
 import "./index.css";
-import { store } from "./redux/store.js";
+import { store } from "./redux/store.ts";
 import { Provider } from "react-redux";
-import AppRouter from "./router.jsx";
+import AppRouter from "./router.tsx";
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <Suspense fallback={<div className="loading">Загрузка страницы...</div>}>
