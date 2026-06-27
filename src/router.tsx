@@ -1,11 +1,11 @@
 import { lazy } from "react";
 import { createHashRouter } from "react-router";
-import App from "./App.jsx";
-import { Home } from "./pages/Home.jsx";
-import { FilmPage } from "./pages/FilmPage.jsx";
+import App from "./App.js";
+import { Home } from "./pages/Home.js";
+import { FilmPage } from "./pages/FilmPage.js";
 import { RouterProvider } from "react-router";
 const FilmsList = lazy(
-  () => import("./features/films/filmsList/FilmsList.jsx"),
+  () => import("./features/films/filmsList/FilmsList.tsx"),
 );
 let route = createHashRouter([
   {

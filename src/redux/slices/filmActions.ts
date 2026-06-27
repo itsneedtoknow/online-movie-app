@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-const initialState = {
+import { FilmItem } from "../../features/films/filmCard/FilmCard";
+interface FilmState {
+  filmsList: FilmItem[];
+  isLoading: boolean;
+}
+const initialState: FilmState = {
   filmsList: [],
   isLoading: false,
 };

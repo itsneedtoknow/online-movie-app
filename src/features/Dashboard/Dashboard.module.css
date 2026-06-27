@@ -1,0 +1,177 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px auto;
+  padding: 24px;
+  h2 {
+    color: white;
+  }
+}
+
+.dashboard-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Карточка профиля */
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-info h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.5rem;
+}
+
+.avatar {
+  font-size: 2rem;
+  background: #374151;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-badge {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Сетка карточек */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 12px;
+}
+
+.card-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #38bdf8;
+  margin: 12px 0 4px 0;
+}
+
+.card-text {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Внутренний баннер для фильма дня */
+.movie-mini-banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://unsplash.com") center/cover;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.movie-mini-banner h4 {
+  margin: 4px 0;
+  font-size: 1.1rem;
+}
+
+.movie-mini-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.rating {
+  color: #fbbf24;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Кнопки внутри карточек */
+.card-action-btn {
+  width: 100%;
+  background: #374151;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+
+.card-action-btn:hover {
+  background: #4b5563;
+}
+
+.card-action-btn.primary {
+  background: #e11d48;
+}
+
+.card-action-btn.primary:hover {
+  background: #f43f5e;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+  background: #374151;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.progress-fill {
+  background: #38bdf8;
+  height: 100%;
+  border-radius: 4px;
+}

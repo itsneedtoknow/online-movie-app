@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import { fetchFilms } from "../redux/filmsData.js";
+// @ts-ignore
 import styles from "./FilmPage.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilms } from "../redux/selectors.js";
+import { ThunkDispatch } from "@reduxjs/toolkit";
 
 export function FilmPage() {
   const { id } = useParams();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
   const films = useSelector(selectFilms);
   const film = films.find((f) => f.imdbID === id);
   useEffect(() => {
